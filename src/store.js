@@ -7,27 +7,14 @@ Vue.use(Vuex)
 const api = new Vapi({
 		baseURL: "http://localhost:3000",
     state: {
-			hello: {},
-			greetings: {},
-			store: {}
+			hello: {}
 		}
   })
   .get({
     action: "getHello",
     property: "hello",
     path: "/hello"
-  })
-  .get({
-    action: "getGreetings",
-    property: "greetings",
-		path: "/greetings",
-		queryParams: true
-  })
-  .post({
-    action: "postStore",
-    property: "store",
-    path: "/store"
-  })
-  .getStore()
+	})
+	.getStore()
 
 export default new Vuex.Store(api)
