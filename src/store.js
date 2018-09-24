@@ -23,11 +23,6 @@ const api = new Vapi({
 		path: "/greetings",
 		queryParams: true
   })
-  .post({
-    action: "postStore",
-    property: "store",
-    path: "/store"
-  })
   .getStore()
 
 export default new Vuex.Store(api)
